@@ -1,6 +1,8 @@
-def main():
-    print("Hello from uv-docker-cookiecutter!")
+from fastapi import FastAPI
+
+app = FastAPI()
 
 
-if __name__ == "__main__":
-    main()
+@app.get("/")
+def get():
+    return "Hello World"
